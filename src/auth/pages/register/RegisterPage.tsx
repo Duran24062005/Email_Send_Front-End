@@ -13,7 +13,7 @@ export const RegisterPage = () => {
           <form className="p-6 md:p-8">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
-                <CustomLogo />
+                <CustomLogo subtitle='User Interface'/>
 
                 <p className="text-balance text-muted-foreground">
                   Crea una nueva cuenta
@@ -102,7 +102,7 @@ export const RegisterPage = () => {
           </form>
           <div className="relative hidden bg-muted md:block">
             <img
-              src="/placeholder.svg"
+              src="https://raw.githubusercontent.com/Duran24062005/educonnect-nextjs-fastapi/refs/heads/main/public/assets/img/Fondo2.jpg"
               alt="Image"
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />

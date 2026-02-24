@@ -5,7 +5,7 @@ import { Label } from '../../../components/ui/label';
 import { CustomLogo } from '../../../components/custom/CustomLogo';
 import { Link, useNavigate } from 'react-router';
 import { useState, type FormEvent } from 'react';
-// import { loginAction } from '@/auth/actions/login.action';
+import { loginAction } from '../../../auth/actions/login.action';
 import { toast } from 'sonner';
 
 export const LoginPage = () => {
@@ -23,13 +23,13 @@ export const LoginPage = () => {
     console.log({email, password});
 
     try {
-      /* const data = await loginAction(email, password);
+      const data = await loginAction(email, password);
       console.log({data});
-      if (data.token) {
-        localStorage.setItem('token', data.token);
+      if (data.access_token) {
+        localStorage.setItem('token', data.access_token);
         console.log("re-direccionando a home");
         navigate('/')
-      }*/
+      }
       
     } catch (error) {
       console.log(error);
@@ -48,7 +48,7 @@ export const LoginPage = () => {
           <form className="p-6 md:p-8" onSubmit={(e)=>handleLogin(e)}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
-                <CustomLogo />
+                <CustomLogo subtitle='User Interface' />
 
                 <p className="text-balance text-muted-foreground">
                   Ingrese a nuestra aplicación
@@ -134,7 +134,7 @@ export const LoginPage = () => {
           </form>
           <div className="relative hidden bg-muted md:block">
             <img
-              src="/placeholder.svg"
+              src="https://raw.githubusercontent.com/Duran24062005/educonnect-nextjs-fastapi/refs/heads/main/public/assets/img/Fondo2.jpg"
               alt="Image"
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />
