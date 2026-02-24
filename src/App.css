@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -46,6 +47,9 @@
 }
 
 :root {
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --font-instrument: "Instrument Serif", serif;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -78,6 +82,18 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+}
+
+.font-open-sans-custom {
+  font-family: var(--font-open-sans);
+}
+
+.font-rubik-custom {
+  font-family: var(--font-rubik);
+}
+
+.font-instrument-custom {
+  font-family: var(--font-instrument);
 }
 
 .dark {
